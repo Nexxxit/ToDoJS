@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo JS</title>
+
+    <link rel="stylesheet" href="/styles/style.css" />
+    <link rel="stylesheet" href="/styles/modal.css" />
+    <link rel="stylesheet" href="/styles/task.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="logo">
+        <img class="logo__img" src="icons/notes.svg" alt="Логотип" />
+      </div>
+      <h1 class="h1 header__h1">ToDo JS</h1>
+    </header>
+
+    <main>
+      <section class="tasks">
+        <h1 class="h1 tasks__h1">Задачи</h1>
+        <div class="store tasks__store">
+          <div class="tasks__store-title">
+            <div class="tasks__store-title-name">
+              <p>Название задачи</p>
+            </div>
+            <div class="tasks__store-title-date">
+              <p>Дата создания</p>
+            </div>
+          </div>
+          <hr class="tasks__store-hr" />
+        </div>
+        <div class="tasks__container">
+          <button
+            class="button tasks__button"
+            id="add-btn"
+            type="button"
+            title="Добавить задачу"
+            onclick="window.modal.showModal()"
+          >
+            <img
+              class="icon tasks__button-icon"
+              src="icons/add.svg"
+              alt="Плюс"
+            />
+          </button>
+        </div>
+      </section>
+
+      <section class="completed-tasks">
+        <h1 class="h1 completed-tasks__h1">Выполненные задачи</h1>
+        <div class="store completed-tasks__store">
+          <div class="completed-tasks__store-title">
+            <div class="tasks__store-title-name">
+              <p>Название задачи</p>
+            </div>
+            <div class="tasks__store-title-date">
+              <p>Дата создания</p>
+            </div>
+          </div>
+          <hr />
+        </div>
+        <div class="completed-tasks__container">
+          <button
+            class="button completed-tasks__button"
+            id="clear-btn"
+            type="button"
+            title="Очистить список выполненных задач"
+          >
+            <img
+              class="icon completed-tasks__button-icon"
+              src="icons/brush.svg"
+              alt="Кисть"
+            />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <dialog id="modal" class="modal" aria-label="Добавление новой задачи">
+      <div class="modal__content">
+        <div class="modal__header">
+          <h3 class="modal__title">Добавление новой задачи</h3>
+        </div>
+        <div class="modal__main">
+          <label class="modal-main__label" for="task-name"
+            >Название задачи</label
+          >
+          <input
+            class="modal-main__input"
+            id="task-name"
+            type="text"
+            value=""
+            placeholder="Введите название задачи"
+            required
+          />
+        </div>
+        <div class="modal__footer">
+          <button
+            class="modal__button modal__button_cancel"
+            id="btn-cancel"
+            type="button"
+            onclick="window.modal.close()"
+          >
+            Отменить
+          </button>
+          <button
+            class="modal__button modal__button_success"
+            id="btn-success"
+            type="button"
+          >
+            Добавить
+          </button>
+        </div>
+      </div>
+    </dialog>
+  </body>
+</html>
+
+<script src="/scripts/script.js" type="text/javascript"></script>

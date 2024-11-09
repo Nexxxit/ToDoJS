@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f55353;
+}
+
+.logo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.logo__img {
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: rotate(10deg);
+}
+
+.header {
+    padding: 1em 10em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    padding: 0 10em;
+    margin-top: 5vh;
+}
+
+.h1 {
+    color: #fff;        
+}
+
+.tasks__h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.completed-tasks__h1 {
+    font-size: 2rem;
+    text-align: center;
+    padding-bottom: 0.5em;
+}
+
+.store {
+    padding: 3em 3em;
+    border: 3px outset #dbdbdb;
+    border-radius: 20px;
+    background-color: #fff;
+    min-height: 20vh;
+    height: 50vh;
+    overflow-y: auto;
+}
+
+.button {
+    min-width: 5em;
+    width: 10em;
+    min-height: 4em;
+    border: 1px solid black;
+    border-radius: 20px;
+    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #c9c8c8;
+    transition: 0.3s;
+}
+
+.button:active {
+    background-color: #a0a0a0;
+    transform: translateY(2px);
+    transition: 0.1s;
+}
+
+.icon {
+    width: 2.5rem;
+}
+
+.completed-tasks__container {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+}
+
+.tasks__container {
+    display: flex;
+    justify-content: center;
+    padding: 1.5em;
+}
+
+.tasks__store-title{
+    display: grid;
+    grid-template-columns: 1fr 1fr 3em 3em ;
+    gap: 20px;
+    padding: 0 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.completed-tasks__store-title {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3em;
+    gap: 20px;
+    padding: 0 1em;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.tasks__store {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.completed-tasks__store {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
