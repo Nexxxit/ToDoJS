@@ -7,75 +7,106 @@
 
     <link rel="stylesheet" href="/styles/style.css" />
     <link rel="stylesheet" href="/styles/modal.css" />
-    <link rel="stylesheet" href="/styles/task.css" />
+    <!-- <link rel="stylesheet" href="/styles/task.css" /> -->
+    <link rel="stylesheet" href="/styles/header.css" />
+    <link rel="stylesheet" href="/styles/groupTasksList.css" />
+    <link rel="stylesheet" href="/styles/button.css" />
+    <link rel="stylesheet" href="/styles/tasksList.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=M+PLUS+Rounded+1c:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header class="header">
       <div class="logo">
         <img class="logo__img" src="icons/notes.svg" alt="Логотип" />
       </div>
-      <h1 class="h1 header__h1">ToDo JS</h1>
+      <h1 class="h header__h1">ToDo JS</h1>
     </header>
 
     <main>
-      <section class="tasks">
-        <h1 class="h1 tasks__h1">Задачи</h1>
-        <div class="store tasks__store">
-          <div class="tasks__store-title">
-            <div class="tasks__store-title-name">
-              <p>Название задачи</p>
-            </div>
-            <div class="tasks__store-title-date">
-              <p>Дата создания</p>
-            </div>
-          </div>
-          <hr class="tasks__store-hr" />
+      <article class="article group-tasks-list">
+        <h3 class="h group-tasks-list__h3">Списки задач</h3>
+        <div class="store group-tasks-list__store">
+          <section class="section group-tasks-list__group">
+            <p class="group-tasks-list__group-name">Домашние дела</p>
+            <button
+              class="button button_rounded group-tasks-list__button-delete"
+              type="button"
+              id="delete-group-btn"
+              title="Удалить группу"
+            >
+              <p class="group-tasks-list__button-delete-icon">-</p>
+            </button>
+          </section>
         </div>
-        <div class="tasks__container">
+        <div class="group-tasks-list__btn-container">
           <button
-            class="button tasks__button"
-            id="add-btn"
+            class="button group-tasks-list__button-create-group"
+            id="create-group-btn"
             type="button"
-            title="Добавить задачу"
+            title="Добавить группу"
             onclick="window.modal.showModal()"
           >
-            <img
-              class="icon tasks__button-icon"
-              src="icons/add.svg"
-              alt="Плюс"
-            />
+            <p class="group-tasks-list__button-create-group-icon">+</p>
           </button>
         </div>
-      </section>
+      </article>
 
-      <section class="completed-tasks">
-        <h1 class="h1 completed-tasks__h1">Выполненные задачи</h1>
-        <div class="store completed-tasks__store">
-          <div class="completed-tasks__store-title">
-            <div class="tasks__store-title-name">
-              <p>Название задачи</p>
-            </div>
-            <div class="tasks__store-title-date">
-              <p>Дата создания</p>
-            </div>
-          </div>
-          <hr />
-        </div>
-        <div class="completed-tasks__container">
+      <article class="article tasks-list">
+        <div class="tasks-list__container">
+          <h3 class="h tasks-list__h3">Задачи</h3>
           <button
-            class="button completed-tasks__button"
-            id="clear-btn"
+            class="button button_rounded tasks-list__button-add-task"
+            id="add-task-btn"
             type="button"
-            title="Очистить список выполненных задач"
+            title="Добавить задачу"
           >
-            <img
-              class="icon completed-tasks__button-icon"
-              src="icons/brush.svg"
-              alt="Кисть"
-            />
+            <p class="tasks-list__button-add-task-icon">+</p>
           </button>
         </div>
-      </section>
+        <div class="store tasks-list__store">
+          <section class="section tasks-list__task">
+            <input class="tasks-list__task-checkbox" type="checkbox" id="checkbox" />
+            <label class="tasks-list__task-checkbox-label" for="checkbox">
+              Приготовить суп
+            </label>
+            <div class="tasks-list__button-container">
+              <button class="button tasks-list__button-delete">
+                <img class="icon tasks-list__button-delete-icon" src="/icons/trash.svg" />
+              </button>
+              <button class="button tasks-list__button-drag">
+                <img class="icon tasks-list__button-drag-icon" src="/icons/layout-grid-small.svg" />
+              </button>
+            </div>
+          </section>
+          <section class="section tasks-list__task tasks-list__task_completed">
+            <input class="tasks-list__task-checkbox" type="checkbox" id="checkbox1" />
+            <label class="tasks-list__task-checkbox-label" for="checkbox1">
+              Купить лук
+            </label>
+            <div class="tasks-list__button-container">
+              <button class="button tasks-list__button-delete">
+                <img class="icon tasks-list__button-delete-icon" src="/icons/trash.svg" />
+              </button>
+              <button class="button tasks-list__button-drag">
+                <img class="icon tasks-list__button-drag-icon" src="/icons/layout-grid-small.svg" />
+              </button>
+            </div>
+          </section>
+        </div>
+        <div class="tasks-list__progress">
+          <span class="tasks-list__progress-bar"></span>
+          <span class="tasks-list__progress-container">
+            <p class="tasks-list__progress-completed">Завершено</p>
+            <p class="tasks-list__progress-tasks">4/4</p>
+          </span>
+        </div>
+      </article>
     </main>
 
     <dialog id="modal" class="modal" aria-label="Добавление новой задачи">

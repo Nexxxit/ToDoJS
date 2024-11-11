@@ -1,0 +1,105 @@
+.tasks-list__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tasks-list__progress-container {
+  display: flex;
+  justify-content: start;
+  gap: 12px;
+  color: #8d8d8d;
+}
+
+.tasks-list__button-add-task {
+  box-shadow: 0 4px 4px 0 rgba(99, 99, 99, 0.25);
+  width: 3em;
+  height: 3em;
+}
+
+.tasks-list__button-add-task-icon {
+  font-size: 26px;
+  font-weight: lighter;
+  color: #a1a1a1;
+}
+
+.tasks-list__task {
+  padding: 20px 20px;
+  align-items: center;
+  gap: 12px;
+}
+
+.tasks-list__store {
+  margin-bottom: auto;
+}
+
+.tasks-list__button-container {
+  margin-left: auto;
+}
+
+.tasks-list__task-checkbox-label {
+  color: #fff;
+}
+
+.tasks-list__task-checkbox-label:hover {
+  cursor: pointer;
+}
+
+.tasks-list__button-delete {
+  background-color: transparent;
+}
+
+.tasks-list__button-drag {
+  background-color: transparent;
+}
+
+.tasks-list__button-delete-icon {
+  width: 2.5em;
+}
+
+.tasks-list__button-drag-icon {
+  width: 2.5em;
+}
+
+.tasks-list__task-checkbox {
+  appearance: none;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  background: rgb(80, 80, 80);
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 100px;
+  border: 3px solid #8a8a8a;
+  transition: 300ms;
+}
+
+.tasks-list__task-checkbox:hover {
+  cursor: pointer;
+}
+
+.tasks-list__task-checkbox::after {
+  content: "\2714";
+  position: absolute;
+  top: -5px;
+  left: 2px;
+  width: 0px;
+  height: 0px;
+  font-size: 22px;
+  transition: 300ms;
+  overflow: hidden;
+}
+
+.tasks-list__task-checkbox:checked::after {
+  width: 30px;
+  height: 30px;
+  transition: 300ms;
+}
+
+.tasks-list__task_completed .tasks-list__task-checkbox-label {
+    color: #C7C7C7;
+    text-decoration: line-through;
+}
+
+.tasks-list__task_completed {
+    background-color: rgb(55, 55, 55);
+}

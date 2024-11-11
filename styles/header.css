@@ -1,0 +1,21 @@
+.header {
+    padding: 1em 10em;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.logo {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.logo__img {
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: rotate(10deg);
+}
+
+.header__h1 {
+    font-weight: 300;
+}

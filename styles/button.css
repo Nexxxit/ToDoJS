@@ -1,0 +1,26 @@
+.button {
+    min-width: 2em;
+    min-height: 2em;
+    background-color: rgba(70, 70, 70, 1);
+    cursor: pointer;
+    border: 0;
+}
+
+.button_rounded {
+    border-radius: 100px;
+}
+
+.button:hover {
+    background-color: #555555;
+    transition: 0.3s;
+}
+
+.button:active {
+    background-color: #404040;
+    transform: translateY(2px);
+    transition: 0.1s;
+}
+
+.icon {
+    min-width: 1rem;
+}

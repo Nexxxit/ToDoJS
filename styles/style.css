@@ -1,43 +1,53 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
 }
 
 body {
-    background-color: #f55353;
-}
-
-.logo {
-    height: 2.5rem;
-    width: 2.5rem;
-}
-
-.logo__img {
-    width: 2.5rem;
-    height: 2.5rem;
-    transform: rotate(10deg);
-}
-
-.header {
-    padding: 1em 10em;
-    display: flex;
-    align-items: center;
-    gap: 15px;
+    background-color: #272727;
 }
 
 main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     padding: 0 10em;
     margin-top: 5vh;
 }
 
-.h1 {
+.h {
     color: #fff;        
 }
 
-.tasks__h1 {
+.article {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    background-color: rgba(50, 50, 50, 0.95);
+    padding: 25px;
+    box-shadow: inset 0 4px 4px 2px rgba(99, 99, 99, 0.25);
+    border-radius: 30px;
+    min-height: 70vh;
+}
+
+.section {
+    display: flex;
+    border-radius: 15px;
+    background-color: rgb(80, 80, 80);
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.store {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* .tasks__h1 {
     font-size: 2rem;
     text-align: center;
     padding-bottom: 0.5em;
@@ -57,31 +67,6 @@ main {
     min-height: 20vh;
     height: 50vh;
     overflow-y: auto;
-}
-
-.button {
-    min-width: 5em;
-    width: 10em;
-    min-height: 4em;
-    border: 1px solid black;
-    border-radius: 20px;
-    box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.button:hover {
-    background-color: #c9c8c8;
-    transition: 0.3s;
-}
-
-.button:active {
-    background-color: #a0a0a0;
-    transform: translateY(2px);
-    transition: 0.1s;
-}
-
-.icon {
-    width: 2.5rem;
 }
 
 .completed-tasks__container {
@@ -124,4 +109,4 @@ main {
     display: flex;
     flex-direction: column;
     gap: 10px;
-}
+} */
