@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="/styles/groupTasksList.css" />
     <link rel="stylesheet" href="/styles/button.css" />
     <link rel="stylesheet" href="/styles/tasksList.css" />
+    <link rel="stylesheet" href="/styles/popupGroup.css" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -50,11 +51,39 @@
             id="create-group-btn"
             type="button"
             title="Добавить группу"
-            onclick="window.modal.showModal()"
           >
             <p class="group-tasks-list__button-create-group-icon">+</p>
           </button>
         </div>
+
+        <dialog class="popup popup-add-group" id="popup-add-group">
+          <div class="popup__content">
+            <div class="popup-header">
+              <button
+                class="button button_rounded popup__button-close"
+                type="button"
+              >
+                <img src="/icons/close.svg" class="popup__icon" />
+              </button>
+            </div>
+            <div class="popup-main">
+              <label class="popup-main__label" for="group-name">
+                Название группы задач
+              </label>
+              <input
+                class="popup-main__input"
+                id="group-name"
+                type="text"
+                value=""
+                placeholder="Введите название группы"
+                required
+              />
+            </div>
+            <div class="popup-footer">
+              <button class="button popup-footer__button-add">Добавить</button>
+            </div>
+          </div>
+        </dialog>
       </article>
 
       <article class="article tasks-list">
@@ -71,30 +100,50 @@
         </div>
         <div class="store tasks-list__store">
           <section class="section tasks-list__task">
-            <input class="tasks-list__task-checkbox" type="checkbox" id="checkbox" />
+            <input
+              class="tasks-list__task-checkbox"
+              type="checkbox"
+              id="checkbox"
+            />
             <label class="tasks-list__task-checkbox-label" for="checkbox">
               Приготовить суп
             </label>
             <div class="tasks-list__button-container">
               <button class="button tasks-list__button-delete">
-                <img class="icon tasks-list__button-delete-icon" src="/icons/trash.svg" />
+                <img
+                  class="icon tasks-list__button-delete-icon"
+                  src="/icons/trash.svg"
+                />
               </button>
               <button class="button tasks-list__button-drag">
-                <img class="icon tasks-list__button-drag-icon" src="/icons/layout-grid-small.svg" />
+                <img
+                  class="icon tasks-list__button-drag-icon"
+                  src="/icons/layout-grid-small.svg"
+                />
               </button>
             </div>
           </section>
           <section class="section tasks-list__task tasks-list__task_completed">
-            <input class="tasks-list__task-checkbox" type="checkbox" id="checkbox1" />
+            <input
+              class="tasks-list__task-checkbox"
+              type="checkbox"
+              id="checkbox1"
+            />
             <label class="tasks-list__task-checkbox-label" for="checkbox1">
               Купить лук
             </label>
             <div class="tasks-list__button-container">
               <button class="button tasks-list__button-delete">
-                <img class="icon tasks-list__button-delete-icon" src="/icons/trash.svg" />
+                <img
+                  class="icon tasks-list__button-delete-icon"
+                  src="/icons/trash.svg"
+                />
               </button>
               <button class="button tasks-list__button-drag">
-                <img class="icon tasks-list__button-drag-icon" src="/icons/layout-grid-small.svg" />
+                <img
+                  class="icon tasks-list__button-drag-icon"
+                  src="/icons/layout-grid-small.svg"
+                />
               </button>
             </div>
           </section>
@@ -116,7 +165,7 @@
         </div>
         <div class="modal__main">
           <label class="modal-main__label" for="task-name"
-            >Название задачи</label
+            >Название группы задач</label
           >
           <input
             class="modal-main__input"
@@ -150,3 +199,5 @@
 </html>
 
 <script src="/scripts/script.js" type="text/javascript"></script>
+<script src="/scripts/addTaskGroup.js" type="text/javascript"></script>
+<script src="/scripts/showHidePopup.js" type="text/javascript"></script>

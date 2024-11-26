@@ -1,3 +1,7 @@
+.group-tasks-list {
+    position: relative;
+}
+
 .group-tasks-list__h3 {
     color: #fff;
 }
